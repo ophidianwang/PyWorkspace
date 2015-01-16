@@ -30,15 +30,15 @@ class od_class01:
 		"get how many class instance is created"
 		return cls.count
 
-	"""@classmethod
-				def class_foo(cls,x):
-					"testing classmethod"
-					print "executing class_foo(%s,%s)"%(cls,x)
-			
-				@staticmethod
-				def static_foo(x):
-					"testing staticmethod"
-					print "executing static_foo(%s)"%x"""
+	@classmethod
+	def class_foo(cls,x):
+		"testing classmethod"
+		print "executing class_foo(%s,%s)"%(cls,x)
+
+	@staticmethod
+	def static_foo(x):
+		"testing staticmethod"
+		print "executing static_foo(%s)"%x
 
 	@classmethod
 	def oInstanceByClass(cls,name):

@@ -5,7 +5,7 @@ test_list = ['1','3838','ophidian']
 oTest = od_class01.oInstanceByClass("ophidian")
 oTest.go()
 
-"""#class_foo("try class method: class_foo")	#wrong syntax
+#class_foo("try class method: class_foo")	#wrong syntax
 oTest.class_foo("try class method: oTest.class_foo")
 od_class01.class_foo("try class method: od_class01.class_foo")
 
@@ -13,7 +13,7 @@ print "=========="
 
 #static_foo("try static method: static_foo")	#wrong syntax
 oTest.static_foo("try static method: oTest.static_foo")
-od_class01.static_foo("try static method: od_class01.static_foo")"""
+od_class01.static_foo("try static method: od_class01.static_foo")
 
 # import only module
 from od_package import od_module_misc

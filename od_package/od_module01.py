@@ -24,7 +24,7 @@ class od_class01:
 	def go(self):
 		"test, print go! and self.__str__"
 		print("go! " + self.__str__())
-	 
+		
 	@classmethod
 	def getX(cls):
 		"get how many class instance is created"

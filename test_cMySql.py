@@ -1,29 +1,59 @@
+# encoding: utf-8
 from time import strftime
-from pWebSite.mMySql import cMySql
-from pWebSite.mMisc import cUtf8Printer
+from time import time
+import datetime
+from aSpider.pDatabase.mMySql import cMySql
+from aSpider.mMisc import cUtf8Printer
 
-"""
-oShell = cMySql.oDB("beauty2")
+import random
+import string
+from datetime import datetime
 
-oCusor = oShell.oQuery("SELECT * FROM project LIMIT 0,10")
+
+oDB = cMySql.oDB("test")
+
+
+oCusor = oDB.oQuery("SELECT * FROM test LIMIT 0,10")
 
 lData = cMySql.lFetchAll(oCusor)
 
 for dSingle in lData:
+	for key in dSingle:
+		print type(dSingle[key])
 	cUtf8Printer().pprint(dSingle)
+	print dSingle
+
+	uValue = dSingle['sValue']
+	print uValue
+
+
 """
-
-oShell = cMySql.oDB("test")
-
 dInsert = {
 	"content":"saodijt9pae8j b093582",
 	"datetime":strftime('%Y-%m-%d %H:%M:%S')
 }
+"""
+"""
+sValue = "加進中文";
+iCount = 0
+while iCount<64:
+	sValue += random.choice(string.ascii_letters)
+	iCount+=1
+
+dInsert = {
+	"sValue":sValue,
+	"iCreateTime":int(time())
+}
 
 cUtf8Printer().pprint(dInsert)
 
-oShell.oInsert("test_py",dInsert)
+oDB.oInsert("test",dInsert)
 
-oShell.vCommit()
+oDB.vCommit()
 
 cUtf8Printer().pprint("done")
+
+dt = datetime.fromtimestamp(dInsert['iCreateTime'])
+
+print dt
+"""

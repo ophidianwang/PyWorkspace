@@ -14,7 +14,7 @@ dMysql = {
 		"host":"172.16.2.41",
 		"user":"robot",
 		"passwd":"robot",
-		"db":"test_mysqli",
+		"db":"test_python",
 		"use_unicode":True	
 	}
 }

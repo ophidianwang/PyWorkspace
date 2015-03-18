@@ -88,3 +88,19 @@ class cMySql:
 			lReturn.append(dRow)
 		
 		return lReturn
+
+	@staticmethod
+	def dFetchOne(oCursor):
+		"fetch one query result in a dictionary"
+		lReturn = []
+
+		tRow = oCursor.fetchone()	#key is field order
+		tField = oCursor.description
+
+		count=0
+		dRow = {}
+		while (count<len(tRow)):
+			dRow[tField[count][0]] = tRow[count]
+			count = count+1
+		
+		return dRow

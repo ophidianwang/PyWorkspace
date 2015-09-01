@@ -1,6 +1,6 @@
 from pprint import pprint
 
-class od_class_misc:
+class od_class_misc(object):
 	"""Summary of class here.
 
     Longer class information....
@@ -18,7 +18,7 @@ class od_class_misc:
 		print "</pre>"
 		return
 
-class od_class_go:
+class od_class_go(object):
 
 	@staticmethod
 	def go(name):

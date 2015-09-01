@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class od_class01:
+class od_class01(object):
 	"""Summary of class here.
 
     Longer class information....
